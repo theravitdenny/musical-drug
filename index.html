@@ -1,0 +1,400 @@
+<!DOCTYPE HTML>
+<html>
+<head><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+#x{display: flex;align-items: center;justify-content: center;
+  width:30%;height:100%;background-color:rgb(69, 69, 69);color:white;font-size: 20px;position:absolute; top:0px;position:fixed;}
+#search-icon {
+    font-size: 24px;
+    cursor: pointer;
+    padding: 10px;
+}
+
+section .search-bar {
+    display: none;
+    width: 200px;
+    padding: 10px;
+    margin-left: 30px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+#header{width:70%;height:170px;
+  background-color:rgb(0, 0, 0);
+  left:30%; top:0%;
+  position: fixed;display: flex;align-items: center;justify-content: center;
+ 
+  }
+ #Nav{ position: fixed;width:70%;height:165px;background-color:rgb(0, 0, 0);color:white;position:absolute; left:30%; top:170px;font-size:20px; }
+#font12{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 40px;
+}#font1, #font2 {
+    display: inline-block;
+}
+#font1 {
+    border-radius: 50px;
+}
+#redirect {display: flex;
+    justify-content: space-between;
+    padding: 0 40px;text-align: center;
+    
+}
+ #c {
+    width: 70%;
+    height: calc(100% - 334px); /* Adjust height according to header and nav */
+    background-color: rgba(11, 11, 0, 0);
+    color: white;
+    position: absolute;
+    left: 30%;
+    top: 334px;
+    overflow-y: auto; /* Enable vertical scrolling */
+    font-size: 20px;
+}
+ #n{width:100%;height:490px;background-color:rgb(69, 69, 69);color:white; font-size:20px;}
+ #o{width:100%;height:490px;background-color:rgb(69, 69, 69);color:white;top:490px;font-size:20px;}
+ #q{width:100%;height:480px;background-color:rgb(69, 69, 69);color:white; top:980px;font-size:20px;}
+ 
+
+
+
+svg{margin:0px 25%}
+a{ text-decoration:none;color:white;
+  } 
+
+img{ border: solid ;
+border-radius:50px ;
+width: 100px;
+  height: 200px;
+}
+
+#a{ border:10px solid white;margin:55px 25px;background-color:#bbb;
+border-radius:50px ;
+width: 100px;
+  height: 200px;
+}
+
+#b{display:flex;}
+
+#b{background-color:rgb ry(70,70,70);}
+ #p{display:flex;}
+#r{display:flex;}
+h1{color:white;}
+a {
+  text-decoration: none;
+  display: inline-block;
+  padding: 8px 9px;
+}
+
+
+.previous {
+  background-color: #f1f1f1;
+  color: black; float:left;margin: 15px;
+}
+
+.next {
+  background-color: #04AA6D;
+  color: white;float:left;margin: 15px;
+}
+.round {
+  border-radius: 50%;
+}
+
+
+#e{float:right;}
+#d{border:1px solid ;border-radius:10px;background-color:white;color:black; float:right;
+}
+
+#f{border:1px solid ;border-radius:20px;background-color:white;color:black;font-size:30px; float:left;}
+
+#g{float:right;}
+
+#i{margin:13px;
+ }
+ #j{margin:36px 15px;
+ }
+ #k{margin:36px 15px;
+ }
+ #l{margin:15px 15px;
+ }
+ #m{margin:33px 15px;
+}
+  
+  #i_1{margin:15px;
+ }
+ #j_1{margin:36px 15px;
+}
+ #k_1{margin:20px 14px;
+ }
+ #l_1{margin:36px 15px;
+ }
+ #m_1{margin:36px 15px;
+ }
+ 
+ 
+ #i_2{margin:35px 15px;
+ }
+ #j_2{margin:10px 15px;
+ }
+ #k_2{margin:36px 14px;
+ }
+ #l_2{margin:36px 15px;
+ }
+ #m_2{margin:36px 15px;
+ }
+  
+ #i, #j, #k, #l, #m,
+#i_1, #j_1, #k_1, #l_1, #m_1,
+#i_2, #j_2, #k_2, #l_2, #m_2 {
+    border: 20px solid green;
+    border-radius: 50px;
+    width: 30%;
+    height: 30px;
+    background-color: green;
+    
+    text-align: center;
+}
+
+ 
+ 
+
+ #y{display: inline-block;}
+ 
+ 
+ 
+ #i:hover, #j:hover, #k:hover, #l:hover, #m:hover,
+#i_1:hover, #j_1:hover, #k_1:hover, #l_1:hover, #m_1:hover,
+#i_2:hover, #j_2:hover, #k_2:hover, #l_2:hover, #m_2:hover {
+    transform: scale(1.1);
+    color: white;
+}
+ 
+ 
+ 
+ 
+ 
+
+
+
+
+#m:hover{transform:scale(1.1);color:white;}
+#e:hover{transform:scale(1.1); background-color: #ddd;
+  color: black;border-radius:10px;}
+ .next:hover{transform:scale(1.1); background-color: #ddd;
+  color: black;border-radius:50px;} 
+  .previous:hover{transform:scale(1.1); background-color: #ddd;
+  color: black;border-radius:50px;}
+  
+#d:hover{transform:scale(1.1);}
+#g:hover{text-decoration:underline;transform:scale(1.1); background-color: #ddd;
+  color: black;border-radius:10px;}
+#f:hover{transform:scale(1.1);
+ border-radius:10px;}
+              
+
+
+
+</style></head>
+
+
+<body >
+
+
+<header id="header">
+<svg id="point" width="500" height="140"  style="background-color:green ;border:5px solid white;
+  border-radius:50%" >
+    <!-- Draw the word "MUSICAL" -->
+    <text id="point1" x="50" y="70" font-family="italic" font-size="30" fill="white">MUSICAL</text>
+    
+    <!-- Draw the word "DRUG" -->
+    <text id="point2" x="160" y="120" font-family="italic" font-size="50" fill="white">DRUG&#127926</text>
+    
+    <!-- Draw musical notes -->
+    <!-- You can add more musical notes or customize them -->
+    
+	<line x1="300" y1="90" x2="370" y2="90" stroke="black" stroke-width="2"/>
+    <line x1="300" y1="120" x2="370" y2="120" stroke="black" stroke-width="2"/>
+  <line x1="300" y1="80" x2="370" y2="80" stroke="black" stroke-width="2"/>
+  <line x1="310" y1="100" x2="370" y2="100" stroke="black" stroke-width="2"/>
+   <line x1="300" y1="110" x2="370" y2="110" stroke="black" stroke-width="2"/>
+   
+	</svg>
+	
+</header>
+<Nav id="Nav">
+	 <div id="font12">
+        <div id="font1">
+            <a href="#" class="previous round">&#8249;</a>
+            <a href="#" class="next round">&#8250;</a>
+        </div>
+        <div id="font2">
+            <i id="e" style="font-size:24px;color:white" class="fa">&#xf0f3;</i>
+            <i id="e" style="font-size:24px; color:white" class='fa'>&#xf0c0;</i>
+            <a href="#" id="d">Explore premium</a>
+        </div>
+    </div><br>
+    <div id="redirect">
+        <a id="f" href="index.html">All</a>
+        <a id="f" href="Music director.html">Music Director</a>
+        <a id="f" href="singer.html">Singer</a>
+        <a id="f" href="ACTOR.HTML">Actor</a>
+    </div>
+
+</Nav>
+<section id="x">
+ 
+
+  <div style="background-color:rgb(69,69,69 ) ;height: 100%;">
+  
+    <h2 style="display: flex;align-items: center;justify-content: center;"><a id="z"href="index.html"> <i class="fa fa-home"></i>home</a></h2>
+   <h2 style="display: flex;align-items: center;justify-content: center;" id="search-icon"><a id="z" href="#"><i class="fa fa-search"></i>search</a></h2>
+   <h2 style="display: flex;align-items: center;justify-content: center;"> <a id="z" href="#">your library</a></h2>
+   <input type="text" id="search-bar" class="search-bar" placeholder="Search...">
+  </div>
+
+</section>
+<section id="c" >
+
+<aside id="n">
+   <div>
+	<span id="h" style=" background-color: black;border-radius: 50%; border: 10px solid white; display: flex;align-items: center;justify-content: center; ">MUSIC DIRECTOR.</span>
+  <div id="b"  >
+ 
+   <div id="a">
+	
+    <img class="image" src=".\s.photo\u1.jpg" alt="Your Image">
+     <span >Yuvan Shankar Raja</span><a href="fin_music.html" target="_self"><i  id="i"style='font-size:24px' class='fa'>&#xf04b;</i></a></div>
+	
+	  <div id="a">
+	
+    <img class="image" src=".\s.photo\ar-rahman.webp">
+      <span>A. R. Rahman </span><a href="AR_Rahuman.html" target="_self"><i id="j" style='font-size:24px' class='fa'>&#xf04b;</i></a></div>
+	  
+	  <div id="a">
+	  
+    <img class="image" src=".\s.photo\Anirudh.jpg">
+	 <span>Anirudh Ravichande </span><a href="Anirudh.html"target="_self"><i id="k" style='font-size:24px' class='fa'>&#xf04b;</i></a></div>
+	  
+	  
+	  
+	  <div id="a">
+	
+    <img class="image" src=".\s.photo\gv prakash.jpeg">
+	 <span>G. V. Prakash Kumar </span><a href="GV_Prakash.html"target="_self"><i id="l" style='font-size:24px' class='fa'>&#xf04b;</i></a></div>
+	  
+	  
+	  <div id="a">
+	 
+    <img class="image" src=".\s.photo\harris jayaraj.jpg">
+	 <span>Harris Jayaraj </span><a href="Harris_jayaraj.html"target="_self"><i id="m" style='font-size:24px' class='fa'>&#xf04b;</i></a></div>
+	  </div></div></aside>
+	  
+	<!-- Draw the word "DRUG" -->
+	 <aside id="o">
+	  
+	  <span id="h" style="background-color: black;border-radius: 50%; border: 10px solid white; display: flex;align-items: center;justify-content: center;">singer.</span>
+  <div  id="p">
+ 
+   <div id="a">
+	
+    <img class="image" src=".\s.photo\S P Balasubrahmanyam.webp">
+	<span >S. P. Balasubrahmanyam</span><a href="SP_Balasubramanyam.html"target="_self"><i  id="i_1"style='font-size:24px' class='fa'>&#xf04b;</i></a></div>
+	
+	  <div id="a">
+	
+    <img class="image" src=".\s.photo\mona.jpeg">
+	<span>Mano</span><a href="Mano.html"target="_self"><i id="j_1" style='font-size:24px' class='fa'>&#xf04b;</i></a></div>
+	  
+	  <div id="a">
+	  
+    <img class="image" src=".\s.photo\Jonita-Gandhi.webp">
+	<span>Jonita-Gandhi</span><a href="Jonita_Gandhi.html"target="_self"><i id="k_1" style='font-size:24px' class='fa'>&#xf04b;</i></a></div>
+	  
+	  
+	  
+	  <div id="a">
+	
+    <img class="image" src=".\s.photo\krish.jpeg">
+	<span>Krish</span><a href="Krish.html"target="_self"><i id="l_1" style='font-size:24px' class='fa'>&#xf04b;</i></a></div>
+	  
+	  
+	  
+	  <div id="a">
+	 
+    <img class="image" src=".\s.photo\hariharn.jpeg">
+	<span>Hariharn </span><a href="Hariharan.html"target="_self"><i id="m_1" style='font-size:24px' class='fa'>&#xf04b;</i></a></div>
+	</div></aside>
+	 <!-- Draw the word "DRUG" -->
+
+	 <aside id="q" >
+	   
+	<span id="h" style="background-color: black;border-radius: 50%; border: 10px solid white; display: flex;align-items: center;justify-content: center;">Actor.</span>
+  <div  id="r">
+ 
+   <div id="a">
+	
+    <img class="image" src=".\s.photo\ajith\vijay.jpg">
+	<span >Vijay</span><a href="Vijay.html"target="_self"><i  id="i_2"style='font-size:24px' class='fa'>&#xf04b;</i></a></div>
+	
+	  <div id="a">
+	
+    <img class="image" src=".\s.photo\ajith\ajith.jpeg">
+	<span>Ajith Kumar</span><a href="Ajith_Kumar.html"target="_self"><i id="j_2" style='font-size:24px' class='fa'>&#xf04b;</i></a></div>
+	  
+	  <div id="a">
+	  
+    <img class="image" src=".\s.photo\ajith\suriya.jpg">
+	<span>Suriya</span><a href="Suriya.html"target="_self"><i id="k_2" style='font-size:24px' class='fa'>&#xf04b;</i></a></div>
+	  
+	  
+	  
+	  <div id="a">
+	
+    <img class="image" src=".\s.photo\ajith\danush.jpg">
+	<span>Dhanush</span><a href="Dhanush.html"target="_self"><i id="l_2" style='font-size:24px' class='fa'>&#xf04b;</i></a></div>
+	  
+	  
+	  
+	  <div id="a">
+	 
+    <img class="image" src=".\s.photo\ajith\sivakarthikeyan.jpg">
+	<span>Sivakarthikeyan</span><a href="Sivakarthikeyan.html"target="_self"><i id="m_2" style='font-size:24px' class='fa'>&#xf04b;</i></a></div>
+	 </div></aside>
+	 
+
+
+  </section>
+	  
+	  
+	  
+ 
+	  
+
+	  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const searchIcon = document.getElementById('search-icon');
+      const searchBar = document.getElementById('search-bar');
+  
+      searchIcon.addEventListener('click', function () {
+          if (searchBar.style.display === 'none' || searchBar.style.display === '') {
+              searchBar.style.display = 'block';
+          } else {
+              searchBar.style.display = 'none';
+          }
+      });
+  });
+  </script>
+	  
+	  
+	  
+	  
+	  
+
+</body>
+</html>

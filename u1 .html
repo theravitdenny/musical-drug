@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"> 
+    <link rel="script" href="music.js">
+    
+    
+    <style>
+        body{
+            background-color: black;position: relative;
+        }
+        #search{position: absolute;top:10px;left:300px;
+                display: none;
+        }
+            #search:hover{
+                display: block;
+            }
+        .previous {
+            font-size: 50px;
+            text-decoration: none;
+            background-color: #f1f1f1;
+            color: black; 
+          margin-left: 10% ; left: 10%;
+          
+        }
+        #font1 {
+            
+        }
+        .round {
+            border-radius: 50%;
+        }
+        #image{
+            border-radius: 50%; margin-left: 12% 
+        }
+        #detial{
+        position: absolute;left:50%;top: 10%;color: beige;
+        
+        font-size:160% ;
+        }
+        #sidebar{
+            position: absolute;left:0%;top: 0%;
+            width:10%;height: 100%;background-color: black;
+        display: flex;
+        justify-content: center;color: chartreuse;
+        }
+        #z{
+            color: chartreuse;
+        }
+     
+
+        #ggd {
+            position: absolute;
+            left: 100px;top: 710px;
+            background-color: white;
+            width: 80%;
+            height: 65px;
+        }
+
+
+   
+    
+   
+    section  .menu_side .menu_song{
+    position: absolute ; left: 100px;top: 350px;
+    width: 80%;
+    height: 320px;
+    border: 1px solid #fff;
+    margin-top: 40px;
+    overflow-y: auto; /* Enable vertical scrolling */}
+    section .menu_side .menu_song li{
+    list-style-type: none;position: relative;
+        display: flex;align-items: center;
+
+    margin-bottom: 10px;width: 100%; height: fit-content;
+    cursor: pointer;
+    }
+    section .menu_side .menu_song li span #sno{
+    font-size: 25px;
+    font-weight: 600;margin-left: 10px;
+    color: #4c5262;
+    }
+    section .menu_side .menu_song li img{
+    width: 35px;
+        height: 32px;margin-left: 35px;
+    }
+    section .menu_side .menu_song li span {
+  font-size: 20px;margin-left: 25px; color: #09eef6;}
+    section .menu_side .menu_song li span .subtitle{
+    font-size: 20px;color: #4c5262;
+    }
+    section .menu_side .menu_song li span .mo_name{
+    
+  font-size:15px; color: #09eef6;}
+        section .menu_side .menu_song li span .subtitle{
+    font-size: 20px;color: #4c5262;
+    }
+    section .menu_side .menu_song li .time{
+    font-size: 25px;color: chartreuse;
+   display: flex;align-items: center;
+   position: absolute;right: 100px;top:-19px ;
+        }
+
+    section .menu_side .menu_song li .bi{
+    font-size: 25px;color: chartreuse;
+    position: absolute;right: 20px;top:10px ;
+    }
+
+    section .menu_side .menu_song li:hover{
+    background-color: #4c5262;
+    }
+    #sno{
+    color: #4c5262;
+    }
+    .mo_name{position: absolute;right: 260px;top:0px ;
+
+    }
+    .master-play {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+    .master-play .wave {
+            width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: flex-end;
+            margin-right: 10px;
+            margin-left: 3px;
+        }
+        
+        .master-play .wave .wave1 {
+            width: 3px;
+            height: 10px;
+            margin-left: 3px;
+            border-radius: 10px 10px 0 0;
+            background-color: black;
+            animation: unset;
+        }
+        .master-play .wave .wave1:nth-child(2) {
+       height: 13px;
+       /* animation-delay: .4s; */
+        }
+        .master-play .wave .wave1:nth-child(3) {
+       height:8 px;
+       /* animation-delay: .8s; */
+        }
+        
+        .master-play img{ 
+            width: 35px; 
+    height: 35px; 
+    margin-right: 20px;
+}
+.master-play span{ 
+            width: 135px; 
+    font-size: 13px; 
+    margin-left: 15px;color: #08daf6;
+}
+.master-play span .subtitle{ 
+          
+    font-size: 13px; 
+    color: #4c5262;
+}
+.master-play .icon{ 
+          
+          font-size: 20px; 
+          color: #51ef35;margin: 0px 15px 0 0px;
+      }
+    
+.master_play .icon .bi{
+cursor: pointer;
+outline: none;
+}
+ .master_play .icon .bi:nth-child(2){
+border: 1px solid rgb(105, 105, 170, .1);
+border-radius: 50%;
+padding: 1px 3px 0px 6px;
+margin: 0px 5px;
+transition: 3s linear;
+}
+.master-play  #currentStart,
+.master-play #currentEnd {
+    color: black;
+    width: 50px;
+    font-size: 11px;
+    font-weight: 400;
+}
+.master-play .bar{
+    position: relative;width: 300px;height: 2px;
+    background-color: rgb(105,105,170,1);margin: 0px 15px 0px 10px;
+}
+.master-play .bar .bar2{
+    position:absolute;width: 20%;height: 100%;
+    background-color: rgb(21, 226, 233); top: 0;
+    
+}
+.master-play .bar .dot{
+    position:absolute;width: 5px;height:5px;
+    background-color: rgb(21, 226, 233);border-radius: 50%;
+     top: -3;left:0px ;transition: 1s linear; 
+}
+/* .master-play .bar .dot::before{ content: "";
+    position:absolute;width: 15px;height:15px;
+    border:1px solid rgb(21, 226, 233);border-radius: 100%;
+     top: -6;left:-6px;box-shadow: inset 0px 0px 3px  #08daf6 ;
+    
+    } */
+    #seek{
+    position: absolute;
+width: 100%;
+top: -9px;
+left: 0;
+cursor: pointer;
+z-index: 99999999;
+transition: 3s linear;
+opacity: 0;
+  }
+   
+.master_play .vol{
+position: relative;
+width: 100%;height: 2px;
+margin-left: 50px;
+background-color: rgb(105, 170, 170,.1);
+}
+.master_play .vol .bi{
+position: absolute;color: #fff;font-size: 25px;
+width: 100%;height: 2px;
+margin-left: 50px;
+
+}
+/* .master-play .vol input{
+    position: absolute;
+width: 10%;
+
+cursor: pointer;
+z-index: 99999999;
+transition: 3s linear;
+opacity: 0;
+  } */
+
+
+
+/* javascript class wave */
+
+.master-play .active.wave1 {
+            
+            animation: wave .5s linear infinite;
+}
+        .master-play .active .wave1:nth-child(2) {
+       animation-delay: .4s;
+        }
+        .master-play .active.wave1:nth-child(3) {
+       animation-delay: .8s;
+        }
+        @keyframes wave {
+            0% {
+                height: 10px;
+            }
+            50% {
+                height: 15px;
+            }
+            100% {
+                height: 10px;
+            }
+        }
+
+
+
+    </style>
+</head>
+<body>
+    
+    <div id="font12">
+        <div id="font1">
+            <a href="#" class="previous round">&#8249;</a>
+            
+        </div>
+    
+    <nav id="Nav"> 
+        <div>
+            <img id="image" src="C:\Users\theravit denny\Desktop\IT project\Spoty\s.photo\u1.jpg">
+       
+        <div id="detial">
+            <h6>public playlist</h6>
+            <h1>yuvan Sanker</h1>
+            <h6>Enjoy the yuvan Drugs</h6>
+            <h6> Made for <b> Yuvan Fans</b>.50 song ,3 hr 26 min</sub></h6>
+        </div> </div>
+    </nav>
+    <section id="sidebar">
+        <div >
+            <h2><a id="z"href="#"> <i class="fa fa-home"></i></a></h2>
+            <h2><a id="z" href="#"><i class="fa fa-search"></i></a>
+            <input type="text" placeholder="SEARCH MUSIC..." id="search"></h2>
+            <h2> <a id="z" href="#"><i class="material-icons">&#xe030</i></a></h2>
+        </div>
+    </section>
+
+    <section>
+
+        <div class="menu_side">
+            
+            <div class="menu_song">
+            <li class="songItem">
+            <span id="sno">01</span>
+            <img src="C:\Users\theravit denny\Desktop\IT project\Spoty\s.photo\u1.jpg" alt="Alan"> 
+            <span  class="m_name"> On my wave  
+            <div class=" subtitle"> Alan Walker</div>
+            </span >
+            <span class="mo_name">
+            Mangaatha
+            <div class=" subtitle"> movie</div>
+            </span>
+        <p class="time"> 04.55</p>
+            <i class="bi playlistplay bi-play-circle"></i>
+         </li>
+         <li class="songItem">
+            <span id="sno">01</span>
+            <img src="C:\Users\theravit denny\Desktop\IT project\Spoty\s.photo\u1.jpg" alt="Alan"> 
+            <span  class="m_name"> On my wave  
+            <div class=" subtitle"> Alan Walker</div>
+            </span >
+            <span class="mo_name">
+            Mangaatha
+            <div class=" subtitle"> movie</div>
+            </span>
+        <p class="time"> 04.55</p>
+            <i class="bi playlistplay bi-play-circle"></i>
+         </li>
+         <li class="songItem">
+            <span id="sno">01</span>
+            <img src="C:\Users\theravit denny\Desktop\IT project\Spoty\s.photo\u1.jpg" alt="Alan"> 
+            <span  class="m_name"> On my wave  
+            <div class=" subtitle"> Alan Walker</div>
+            </span >
+            <span class="mo_name">
+            Mangaatha
+            <div class=" subtitle"> movie</div>
+            </span>
+        <p class="time"> 04.55</p>
+            <i class="bi playlistplay bi-play-circle"></i>
+         </li>
+         <li class="songItem">
+            <span id="sno">01</span>
+            <img src="C:\Users\theravit denny\Desktop\IT project\Spoty\s.photo\u1.jpg" alt="Alan"> 
+            <span  class="m_name"> On my wave  
+            <div class=" subtitle"> Alan Walker</div>
+            </span >
+            <span class="mo_name">
+            Mangaatha
+            <div class=" subtitle"> movie</div>
+            </span>
+        <p class="time"> 04.55</p>
+            <i class="bi playlistplay bi-play-circle"></i>
+         </li>
+         <li class="songItem">
+            <span id="sno">01</span>
+            <img src="C:\Users\theravit denny\Desktop\IT project\Spoty\s.photo\u1.jpg" alt="Alan"> 
+            <span  class="m_name"> On my wave  
+            <div class=" subtitle"> Alan Walker</div>
+            </span >
+            <span class="mo_name">
+            Mangaatha
+            <div class=" subtitle"> movie</div>
+            </span>
+        <p class="time"> 04.55</p>
+            <i class="bi playlistplay bi-play-circle"></i>
+         </li>
+         <li class="songItem">
+            <span id="sno">01</span>
+            <img src="C:\Users\theravit denny\Desktop\IT project\Spoty\s.photo\u1.jpg" alt="Alan"> 
+            <span  class="m_name"> On my wave  
+            <div class=" subtitle"> Alan Walker</div>
+            </span >
+            <span class="mo_name">
+            Mangaatha
+            <div class=" subtitle"> movie</div>
+            </span>
+        <p class="time"> 04.55</p>
+            <i class="bi playlistplay bi-play-circle"></i>
+         </li>
+         <li class="songItem">
+            <span id="sno">01</span>
+            <img src="C:\Users\theravit denny\Desktop\IT project\Spoty\s.photo\u1.jpg" alt="Alan"> 
+            <span  class="m_name"> On my wave  
+            <div class=" subtitle"> Alan Walker</div>
+            </span >
+            <span class="mo_name">
+            Mangaatha
+            <div class=" subtitle"> movie</div>
+            </span>
+        <p class="time"> 04.55</p>
+            <i class="bi playlistplay bi-play-circle"></i>
+         </li>
+         <li class="songItem">
+            <span id="sno">01</span>
+            <img src="C:\Users\theravit denny\Desktop\IT project\Spoty\s.photo\u1.jpg" alt="Alan"> 
+            <span  class="m_name"> On my wave  
+            <div class=" subtitle"> Alan Walker</div>
+            </span >
+            <span class="mo_name">
+            Mangaatha
+            <div class=" subtitle"> movie</div>
+            </span>
+        <p class="time"> 04.55</p>
+            <i class="bi playlistplay bi-play-circle"></i>
+         </li>
+         <li class="songItem">
+            <span id="sno">01</span>
+            <img src="C:\Users\theravit denny\Desktop\IT project\Spoty\s.photo\u1.jpg" alt="Alan"> 
+            <span  class="m_name"> On my wave  
+            <div class=" subtitle"> Alan Walker</div>
+            </span >
+            <span class="mo_name">
+            Mangaatha
+            <div class=" subtitle"> movie</div>
+            </span>
+        <p class="time"> 04.55</p>
+            <i class="bi playlistplay bi-play-circle"></i>
+         </li>
+         <li class="songItem">
+            <span id="sno">01</span>
+            <img src="C:\Users\theravit denny\Desktop\IT project\Spoty\s.photo\u1.jpg" alt="Alan"> 
+            <span  class="m_name"> On my wave  
+            <div class=" subtitle"> Alan Walker</div>
+            </span >
+            <span class="mo_name">
+            Mangaatha
+            <div class=" subtitle"> movie</div>
+            </span>
+        <p class="time"> 04.55</p>
+            <i class="bi playlistplay bi-play-circle"></i>
+         </li>
+         <li class="songItem">
+            <span id="sno">01</span>
+            <img src="C:\Users\theravit denny\Desktop\IT project\Spoty\s.photo\u1.jpg" alt="Alan"> 
+            <span  class="m_name"> On my wave  
+            <div class=" subtitle"> Alan Walker</div>
+            </span >
+            <span class="mo_name">
+            Mangaatha
+            <div class=" subtitle"> movie</div>
+            </span>
+        <p class="time"> 04.55</p>
+            <i class="bi playlistplay bi-play-circle"></i>
+         </li>
+         <li class="songItem">
+            <span id="sno">01</span>
+            <img src="C:\Users\theravit denny\Desktop\IT project\Spoty\s.photo\u1.jpg" alt="Alan"> 
+            <span  class="m_name"> On my wave  
+            <div class=" subtitle"> Alan Walker</div>
+            </span >
+            <span class="mo_name">
+            Mangaatha
+            <div class=" subtitle"> movie</div>
+            </span>
+        <p class="time"> 04.55</p>
+            <i class="bi playlistplay bi-play-circle"></i>
+         </li>
+         <li class="songItem">
+            <span id="sno">01</span>
+            <img src="C:\Users\theravit denny\Desktop\IT project\Spoty\s.photo\u1.jpg" alt="Alan"> 
+            <span  class="m_name"> On my wave  
+            <div class=" subtitle"> Alan Walker</div>
+            </span >
+            <span class="mo_name">
+            Mangaatha
+            <div class=" subtitle"> movie</div>
+            </span>
+        <p class="time"> 04.55</p>
+            <i class="bi playlistplay bi-play-circle"></i>
+         </li>
+         <li class="songItem">
+            <span id="sno">01</span>
+            <img src="C:\Users\theravit denny\Desktop\IT project\Spoty\s.photo\u1.jpg" alt="Alan"> 
+            <span  class="m_name"> On my wave  
+            <div class=" subtitle"> Alan Walker</div>
+            </span >
+            <span class="mo_name">
+            Mangaatha
+            <div class=" subtitle"> movie</div>
+            </span>
+        <p class="time"> 04.55</p>
+            <i class="bi playlistplay bi-play-circle"></i>
+         </li>
+        </div>
+        <div class="song-side"></div>
+        
+        </div>   
+    </section>
+    <section id="ggd"> 
+        <div class="master-play">
+            <div class="wave">
+                <div class="wave1"></div>
+                <div class="wave1"></div>
+                <div class="wave1"></div>
+           
+            </div>
+            <img src="C:\Users\theravit denny\Desktop\IT project\Spoty\s.photo\u1.jpg" alt="Alan">
+            <span  class="m_name"> On my wave  
+                <div class=" subtitle"> Alan Walker</div>
+                </span >
+                <div class="icon">
+                    <i class="bi bi-skip-start-circle"></i>
+                    <i class="bi bi-play-fill"></i>
+                    <i class="bi bi-skip-end-circle"></i>
+
+                </div>
+                
+                <span id="currentStart">0:00</span>
+                <div class="bar">
+                <input type="range" id="seek" min="0" value="0" max="100">
+                <div class="bar2"></div>
+                <div class="dot"></div>
+            </div>
+                <span id="currentEnd">0:00</span>
+                <div class="vol">
+                    <i class="bi bi-volume-up"></i>
+                    <input type="range" id="vol" min="0" value="30" max="100">
+                    <div class="vol_bar"></div>
+                    <div class="dot" id="vol_bar"></div>
+                </div>
+                </div>
+    </section>
+    <footer> </footer>
+    
+    <script src="music.js"></script>
+
+
+</body>
+</html>
